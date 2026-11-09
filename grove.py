@@ -150,8 +150,10 @@ def extract_FunGroup(smiles, functional_groups):
 # 检测官能团种类及数量，并计算溶解度
 def calc_delta_from_fragments(
         fragments: List[Tuple[str, Any, str]],
-        weight_csv: str = "FunGroup_Weight.csv"
+        weight_csv: str = None
 ) -> Dict[str, Any]:
+    if weight_csv is None:
+        weight_csv = os.path.join(_GROVE_DIR, "FunGroup_Weight.csv")
     df = pd.read_csv(weight_csv, index_col=0)
     weights = dict(
         zip(df.index.astype(str), df.iloc[:, 0].astype(float))
