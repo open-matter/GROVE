@@ -1,6 +1,6 @@
 # GROVE: Functional-Group Tokenizer for Polymers
 
-**GROVE** (**G**roup **R**epresentation **O**f polymer **VE**ctors) converts a polymer SMILES string into a sequence of functional-group tokens using 64 hand-designed SMARTS patterns.
+**GROVE** (functional-**GR**oup **O**rdered **V**isual **E**ncoding) converts a polymer SMILES string into a sequence of functional-group tokens using 64 hand-designed SMARTS patterns.
 
 Each atom in the SMILES is assigned to exactly one functional group via a greedy maximum-match priority rule, producing a human-interpretable token sequence that preserves the chemical structure of the repeat unit.
 
