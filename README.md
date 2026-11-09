@@ -21,16 +21,18 @@ pip install rdkit numpy pandas scikit-learn
 ```python
 from grove import smiles_to_grove
 
-# Polyimide repeat unit
-smiles = "*c1ccc(Oc2ccc(-c3ccc(Oc4ccc(N5C(=O)c6ccccc6C5=O)cc4)cc3)cc2)cc1"
+# PEEK (Poly Ether Ether Ketone)
+smiles = "*Oc1ccc(Oc2ccc(C(=O)c3ccc(*)cc3)cc2)cc1"
 grove_string = smiles_to_grove(smiles)
 print(grove_string)
+# Output: O^c1ccccc1^O^c1ccccc1^C=O^c1ccccc1^
+#         ↑ether ↑benzene ↑ether ↑benzene ↑ketone ↑benzene
 ```
 
 Command-line usage:
 
 ```bash
-python grove.py "*OC(C)C(=O)*"
+python grove.py "*Oc1ccc(Oc2ccc(C(=O)c3ccc(*)cc3)cc2)cc1"
 ```
 
 ---
