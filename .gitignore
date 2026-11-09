@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+*.pyo
+.env
+*.log
+*.pt
+*.bin
+*.safetensors
+*.h5
+.DS_Store
